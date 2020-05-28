@@ -20,17 +20,16 @@ public class FurtherCodingPracticeProblems {
 
     public static void printHelloWorld(int[] array) {
         for(int i = 0; i < array.length; i++){
-            boolean found = false;
-            if(array[i] % 5 == 0){
-                found = true;
-                System.out.print("Hello");
+            if(array[i] % 5 == 0 && array[i] % 7 == 0){
+                System.out.println("HelloWorld");
             }
-            if(array[i] % 7 == 0){
-                found = true;
-                System.out.print("World");
-            }
-            if(found){
-                System.out.println();
+            else{
+                if(array[i] % 5 == 0){
+                    System.out.println("Hello");
+                }
+                if(array[i] % 7 == 0){
+                    System.out.println("World");
+                }
             }
         }
     }
