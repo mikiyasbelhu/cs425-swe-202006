@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Mikiyas S">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
+    <title>eRegistrar</title>
+</head>
+<body>
+<div class="wrapper">
+    <section class="hero">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-light navbar-toggleable-sm">
+                    <a href="#" class="navbar-brand mb-0">eRegistrar</a>
+
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="headerNav" class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sec-about">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sec-pricing">Pricing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sec-contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="jumbotron jumbotron-fluid mb-0">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-10 col-lg-6">
+                        <h1 class="display-5">The Coolest Registrar System you can think of</h1>
+
+                        <p class="lead">How you choose to register your clients has impact on your productivity and creativity. It also says a lot about your business. We are the right registration system for you.</p>
+
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="#sec-contact" role="button">Contact US</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-about" class="sec-about pt-5 pb-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10 col-lg-8">
+                    <h1 class="h4">About us</h1>
+                    <p class="mt-4 mb-4">Registration systems are brilliant for companies of any size who want have a well managed registration process. Our system is cost effective, flexible and full of a of modules which meet your desires..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-pricing" class="sec-pricing">
+        <div class="container">
+            <h1 class="h4 mb-5 text-center">Great prices for everyone</h1>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-block">
+                            <h4 class="card-title h5">Small Group</h4>
+
+                            <h5 class="card-title h6">100 &dollar;/month</h5>
+
+                            <p class="card-text">The flexible minimum packages offers registration for start-ups, freelancers and entrepreneurs, flex desk.</p>
+
+                            <a href="#" class="btn btn-primary">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-block">
+                            <h4 class="card-title h5">Medium Group</h4>
+
+                            <h5 class="card-title h6">320 &dollar;/month</h5>
+
+                            <p class="card-text">As your company grows we are there for you, we will customize the modules with all the accessorise you like.</p>
+
+                            <a href="#" class="btn btn-primary">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-block justify-content-center">
+                            <h4 class="card-title h5">Large Group</h4>
+
+                            <h5 class="card-title h6">640 &dollar;/month</h5>
+
+                            <p class="card-text">Contains all the modules needed by a large company with a 24/7 customer support</p>
+
+                            <a href="#" class="btn btn-primary">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-contact" class="sec-contact pt-5 pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-7">
+                    <h1 class="h4">Have a question? Get in touch with us!</h1>
+
+                    <form action="" method="">
+                        <fieldset class="form-group">
+                            <label for="formName">Your Name:</label>
+                            <input id="formName" class="form-control" type="text" placeholder="Your Name" required>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label for="formEmail1">Email address:</label>
+                            <input id="formEmail1" class="form-control" type="email" placeholder="Enter email" required>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label for="formMessage">Your Message:</label>
+                            <textarea id="formMessage" class="form-control" rows="3" placeholder="Your message" required></textarea>
+                        </fieldset>
+
+                        <fieldset class="form-group text-center">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="list-inline mb-0 text-center">
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-twitter"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-google-plus"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-instagram"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-envelope-o"></span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
