@@ -9,9 +9,7 @@ public class Student {
     private String name;
     private LocalDate dateOfAdmission;
 
-    public Student(int studentId) {
-        this.studentId = studentId;
-    }
+    public Student() {}
 
     public Student(int studentId, String name) {
         this.studentId = studentId;
