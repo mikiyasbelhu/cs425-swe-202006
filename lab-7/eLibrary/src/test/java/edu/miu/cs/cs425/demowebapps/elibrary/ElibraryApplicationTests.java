@@ -1,4 +1,4 @@
-package edu.miu.cs.cs425.demowebapps.elibrary.elibrary;
+package edu.miu.cs.cs425.demowebapps.elibrary;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ElibraryApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
