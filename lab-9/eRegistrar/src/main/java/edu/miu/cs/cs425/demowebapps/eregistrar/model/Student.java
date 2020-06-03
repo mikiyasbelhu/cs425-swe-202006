@@ -1,5 +1,7 @@
 package edu.miu.cs.cs425.demowebapps.eregistrar.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
@@ -24,18 +26,33 @@ public class Student {
 
     private Double cgpa;
 
-    private LocalDate dateOfEnrollment;
+    @NotBlank
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate enrollmentDate;
+
+    @NotBlank
+    private Boolean isInternational;
 
     public Student() {
     }
 
-    public Student(@NotBlank String studentNumber, @NotBlank String firstName, String middleName, @NotBlank String lastName, Double cgpa, LocalDate dateOfEnrollment) {
+    public Student(Long studentId, @NotBlank String studentNumber, @NotBlank String firstName, String middleName, @NotBlank String lastName, Double cgpa, LocalDate enrollmentDate, Boolean isInternational) {
+        this.studentId = studentId;
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.cgpa = cgpa;
-        this.dateOfEnrollment = dateOfEnrollment;
+        this.enrollmentDate = enrollmentDate;
+        this.isInternational = isInternational;
+    }
+
+    public Long getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 
     public String getStudentNumber() {
@@ -78,12 +95,19 @@ public class Student {
         this.cgpa = cgpa;
     }
 
-    public LocalDate getDateOfEnrollment() {
-        return dateOfEnrollment;
+    public LocalDate getEnrollmentDate() {
+        return enrollmentDate;
     }
 
-    public void setDateOfEnrollment(LocalDate dateOfEnrollment) {
-        this.dateOfEnrollment = dateOfEnrollment;
+    public void setEnrollmentDate(LocalDate enrollmentDate) {
+        this.enrollmentDate = enrollmentDate;
     }
 
+    public Boolean getInternational() {
+        return isInternational;
+    }
+
+    public void setInternational(Boolean international) {
+        isInternational = international;
+    }
 }

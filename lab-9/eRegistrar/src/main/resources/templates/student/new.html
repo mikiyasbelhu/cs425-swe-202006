@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Mikiyas S">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
+    <title>eRegistrar</title>
+</head>
+<body>
+<div class="wrapper">
+    <div th:replace="fragments/header :: header"></div>
+    <div class="container">
+        <div class="py-5">
+            <h3>Add new student</h3>
+        </div>
+        <form method="post" action="/eregistrar/student/new" th:object="${student}">
+<!--            <input type="hidden" name="studentId" th:value="${student.studentId}">-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="alert alert-danger"></span>
+                            <label for="firstName">First Name*</label>
+                            <input th:value="${student.firstName}" type="text" class="form-control" id="firstName" name="firstName" aria-describedby="firstName" autofocus required>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('middleName')}" th:errors="*{middleName}" class="alert alert-danger"></span>
+                            <label for="middleName">Middle Name</label>
+                            <input th:value="${student.middleName}" type="text" class="form-control" id="middleName" name="middleName" aria-describedby="middleName">
+                            <small id="middleNameHelp" class="form-text text-muted">Leave this empty if you don't have middle name.</small>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="alert alert-danger"></span>
+                            <label for="lastName">Last Name*</label>
+                            <input th:value="${student.lastName}" type="text" class="form-control" id="lastName" name="lastName" aria-describedby="lastName" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('studentNumber')}" th:errors="*{studentNumber}" class="alert alert-danger"></span>
+                            <label for="studentNumber">Student Number*</label>
+                            <input th:value="${student.studentNumber}" type="text" class="form-control" id="studentNumber" name="studentNumber" aria-describedby="studentNumber" required>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('cgpa')}" th:errors="*{cgpa}" class="alert alert-danger"></span>
+                            <label for="cgpa">CGPA</label>
+                            <input th:value="${student.cgpa}" type="number" class="form-control" id="cgpa" name="cgpa" aria-describedby="cgpa">
+                            <small id="cgpaHelp" class="form-text text-muted">Leave this empty if you don't have CGPA.</small>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <span th:if="${#fields.hasErrors('enrollmentDate')}" th:errors="*{enrollmentDate}" class="alert alert-danger"></span>
+                            <label for="enrollmentDate">Enrollment Date</label>
+                            <input th:value="${student.enrollmentDate}" type="date" class="form-control" id="enrollmentDate" name="enrollmentDate" aria-describedby="enrollmentDate" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group pl-3">
+                            <input th:value="${student.international}" type="checkbox" class="form-check-input" id="isInternational">
+                            <label class="form-check-label" for="isInternational">Is International?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="float-right">
+                <button type="reset" class="btn btn-primary">Reset</button>
+                <a href="/eregistrar/student/list" type="submit" class="btn btn-primary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+</body>
+</html>
