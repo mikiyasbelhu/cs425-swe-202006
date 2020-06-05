@@ -1,5 +1,4 @@
-# HIP-boilerplate
-
+# Eregistrar
 ## Project setup
 ```
 yarn install
