@@ -1,0 +1,92 @@
+import Vue from "vue";
+import { DefaultTheme } from "@/themes";
+
+import {
+  Vuetify,
+  VApp,
+  VNavigationDrawer,
+  VFooter,
+  VList,
+  VBtn,
+  VIcon,
+  VGrid,
+  VToolbar,
+  VSwitch,
+  VCard,
+  VMenu,
+  VTooltip,
+  VDivider,
+  VBreadcrumbs,
+  VDataTable,
+  VPagination,
+  VForm,
+  VSelect,
+  VTextField,
+  VTextarea,
+  VCheckbox,
+  VProgressLinear,
+  VDialog,
+  VAlert,
+  VBadge,
+  VTabs,
+  VAvatar,
+  VChip,
+  VDatePicker,
+  VTimePicker,
+  VExpansionPanel,
+  VResponsive,
+  VDataIterator,
+  VBottomSheet,
+  VSubheader,
+  VSnackbar,
+  transitions
+} from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+
+// import i18n from "../i18n";
+
+Vue.use(Vuetify, {
+  // lang: {
+  //   t: (key, ...params) => i18n.t(key, params)
+  // },
+  theme: DefaultTheme,
+  components: {
+    VApp,
+    VNavigationDrawer,
+    VFooter,
+    VList,
+    VBtn,
+    VIcon,
+    VGrid,
+    VToolbar,
+    VSwitch,
+    VCard,
+    VMenu,
+    VTooltip,
+    VDivider,
+    VBreadcrumbs,
+    VDataTable,
+    VPagination,
+    VForm,
+    VSelect,
+    VTextField,
+    VTextarea,
+    VCheckbox,
+    VProgressLinear,
+    VDialog,
+    VAlert,
+    VBadge,
+    VTabs,
+    VAvatar,
+    VChip,
+    VDatePicker,
+    VTimePicker,
+    VExpansionPanel,
+    VResponsive,
+    VDataIterator,
+    VBottomSheet,
+    VSubheader,
+    VSnackbar,
+    transitions
+  }
+});

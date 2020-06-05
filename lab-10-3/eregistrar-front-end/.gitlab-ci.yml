@@ -1,0 +1,27 @@
+image: node:10
+cache:
+  paths:
+    - node_modules/
+    - ~/.yarn
+    - ~/.cache
+before_script:
+  - node --version
+  - yarn --version
+  - apt-get update
+  - apt-get install sshpass -y
+  - apt-get install rsync -y
+
+stages:
+  - deploy
+production:
+  stage: deploy
+  environment:
+    name: production
+  when: manual
+  only:
+    - master
+  script:
+    - yarn install
+    - yarn build
+    - sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "rm -rf  $PRODUCTION_PATH && mkdir -p $PRODUCTION_PATH"
+    - sshpass -e rsync -av dist/ $DEPLOY_USER@$DEPLOY_HOST:$PRODUCTION_PATH

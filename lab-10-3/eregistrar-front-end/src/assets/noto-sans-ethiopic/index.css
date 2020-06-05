@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Noto Sans Ethiopic';
+    src: url('NotoSansEthiopic-Regular.woff2') format('woff2'),
+        url('NotoSansEthiopic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Ethiopic';
+    src: url('NotoSansEthiopic-Bold.woff2') format('woff2'),
+        url('NotoSansEthiopic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
