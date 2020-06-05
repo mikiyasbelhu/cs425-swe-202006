@@ -48,7 +48,7 @@ public class StudentServiceImpl implements StudentService {
                     student.setCgpa(updatedStudent.getCgpa());
                     student.setEnrollmentDate(updatedStudent.getEnrollmentDate());
                     student.setInternational(updatedStudent.getInternational());
-                    return student;
+                    return studentRepository.save(student);
                 })
                 .orElseGet(() -> studentRepository.save(updatedStudent));
     }

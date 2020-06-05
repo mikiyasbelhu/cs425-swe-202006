@@ -41,6 +41,9 @@ public class StudentController {
 
     @PutMapping(value = "/edit/{studentId}")
     public Student updateStudent(@Valid @RequestBody Student updatedStudent, @PathVariable Long studentId){
+
+        System.out.println("updatedStudent");
+        System.out.println(updatedStudent.getFirstName());
         return studentService.updateStudent(updatedStudent,studentId);
     }
 
